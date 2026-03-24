@@ -3,8 +3,8 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #0c0c0c;
-    color: white;
+    background: #0b0b0b;
+    color: #fff;
 }
 
 /* NAVBAR */
@@ -12,8 +12,13 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 20px 60px;
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.9);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: gold;
 }
 
 nav a {
@@ -29,35 +34,43 @@ nav a:hover {
 /* HERO */
 .hero {
     height: 100vh;
-    background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') no-repeat center/cover;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover;
     display: flex;
     align-items: center;
     padding-left: 80px;
 }
 
-.hero-text h1 {
+.hero h1 {
     font-size: 60px;
+    color: gold;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 10px 0;
 }
 
 .btn {
     background: gold;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-decoration: none;
     color: black;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
 }
 
 /* PRODUCTS */
 .heading {
     text-align: center;
-    margin-top: 30px;
+    margin: 40px 0;
+    color: gold;
 }
 
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    padding: 50px;
     gap: 30px;
+    padding: 40px;
 }
 
 .card {
@@ -87,5 +100,5 @@ nav a:hover {
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: scale(1.05);
 }
