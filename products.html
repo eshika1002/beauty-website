@@ -1,55 +1,110 @@
-<!DOCTYPE html>
-<html>
+<!-- Beauty Products Section -->
+<div class="products">
+    <div class="product">
+        <img src="images/facecream.jpg" alt="Face Cream">
+        <h3>Face Cream</h3>
+        <p>Product Code: FC001</p>
+    </div>
+
+    <div class="product">
+        <img src="images/lipstick.jpg" alt="Lipstick">
+        <h3>Lipstick</h3>
+        <p>Product Code: LS002</p>
+    </div>
+
+    <div class="product">
+        <img src="images/shampoo.jpg" alt="Shampoo">
+        <h3>Shampoo</h3>
+        <p>Product Code: SH003</p>
+    </div>
+
+    <div class="product">
+        <img src="images/eyeliner.jpg" alt="Eyeliner">
+        <h3>Eyeliner</h3>
+        <p>Product Code: EL004</p>
+    </div>
+
+    <div class="product">
+        <img src="images/moisturizer.jpg" alt="Moisturizer">
+        <h3>Moisturizer</h3>
+        <p>Product Code: MO005</p>
+    </div>
+</div><!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Products</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 0;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product h3 {
+            margin: 15px 0 10px;
+            font-size: 18px;
+        }
+        .product p {
+            color: #555;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    <h1 style="text-align:center; margin-top:30px;">Our Beauty Products</h1>
 
-<nav>
-    <div class="logo">GlowBeauty</div>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="products.html">Shop</a>
-        <a href="cart.html">Cart 🛒</a>
+    <div class="products">
+        <div class="product">
+            <img src="images/facecream.jpg" alt="Face Cream">
+            <h3>Face Cream</h3>
+            <p>Product Code: FC001</p>
+        </div>
+
+        <div class="product">
+            <img src="images/lipstick.jpg" alt="Lipstick">
+            <h3>Lipstick</h3>
+            <p>Product Code: LS002</p>
+        </div>
+
+        <div class="product">
+            <img src="images/shampoo.jpg" alt="Shampoo">
+            <h3>Shampoo</h3>
+            <p>Product Code: SH003</p>
+        </div>
+
+        <div class="product">
+            <img src="images/eyeliner.jpg" alt="Eyeliner">
+            <h3>Eyeliner</h3>
+            <p>Product Code: EL004</p>
+        </div>
+
+        <div class="product">
+            <img src="images/moisturizer.jpg" alt="Moisturizer">
+            <h3>Moisturizer</h3>
+            <p>Product Code: MO005</p>
+        </div>
     </div>
-</nav>
-
-<h1 class="heading">Our Collection</h1>
-
-<div class="products">
-
-    <div class="card">
-        <img src="images/lipstick.jpg" alt="Lipstick">
-        <h3>Luxury Lipstick</h3>
-        <p>₹499</p>
-        <button onclick="addToCart('Lipstick',499)">Add to Cart</button>
-    </div>
-
-    <div class="card">
-        <img src="images/facecream.jpg" alt="">
-        <h3>Face Cream</h3>
-        <p>₹799</p>
-        <button onclick="addToCart('Face Cream',799)">Add to Cart</button>
-    </div>
-
-    <div class="card">
-        <img src="images/perfume.jpg" alt="">
-        <h3>Perfume</h3>
-        <p>₹999</p>
-        <button onclick="addToCart('Perfume',999)">Add to Cart</button>
-    </div>
-
-</div>
-
-<script>
-function addToCart(name, price) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push({name, price});
-    localStorage.setItem("cart", JSON.stringify(cart));
-    alert("Added to cart 🛒");
-}
-</script>
-
 </body>
 </html>
